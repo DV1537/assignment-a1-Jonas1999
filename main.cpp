@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-
 /**
  * The program reads numbers from a file and prints the sum of them
  * Example: main.exe ./tests/input.in
@@ -23,8 +22,13 @@ int main(int argc, const char * argv[])
     
     while (myReadFile >> a)
     {
+        if(a < INT_MAX && a > INT_MIN){
         sum += a;
         nums++;
+        }
+        else{//if "a" isn't a number it returns 1 and exits
+        return 1;
+        }
     }
     myReadFile.close();
     
