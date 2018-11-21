@@ -1,2 +1,2 @@
 TestRule: main.cpp
-	g++ main.cpp -o AssignmentA1.exe -static-libgcc -static-libstdc++
+	g++ main.cpp Shape.h Shape.cpp -o main.exe -static-libgcc -static-libstdc++

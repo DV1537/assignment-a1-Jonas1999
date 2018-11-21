@@ -22,7 +22,7 @@ int main(int argc, const char * argv[])
     
     while (myReadFile >> a)
     {
-        if(a < INT_MAX && a > INT_MIN){
+        if(a < DBL_MAX && a > DBL_MIN){
         sum += a;
         nums++;
         }
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
     myReadFile.close();
     
     avg = sum / nums;
-    double* numArr = new double[nums];//makes dynamic array with the size depending on the amount of numbers
+    int* numArr = new int[nums];//makes dynamic array with the size depending on the amount of numbers
     myReadFile.open(argv[1]);//re-opens the file to save the numbers in the dynamic array
     while (myReadFile >> a)
     {
